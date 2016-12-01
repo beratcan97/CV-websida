@@ -7,6 +7,94 @@
     <ul style="list-style-type:disc"></ul>
     <div id="snow">
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#pane2").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#flip3").click(function(){
+        $("#pane3").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#flip4").click(function(){
+        $("#pane4").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#flip5").click(function(){
+        $("#pane5").slideToggle("slow");
+    });
+});
+</script>
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+#pane2, #flip2 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+#pane3, #flip3 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+#pane4, #flip4 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+#pane5, #flip5 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+#panel {
+    padding: 10px;
+    display: none;
+}
+#pane2 {
+    padding: 10px;
+    display: none;
+}
+#pane3 {
+    padding: 10px;
+    display: none;
+}
+#pane4 {
+    padding: 10px;
+    display: none;
+}
+#pane5 {
+    padding: 10px;
+    display: none;
+}
+</style>
 </head>
 <body>
         <h1>Beratcan Acil CV</h1>
@@ -14,41 +102,36 @@
         <img src="Beratcan.jpg" alt="Beratcan" style="text-align: center;width:100px;height:150px;">
         </center>
         <li><b>Namn:</b> Beratcan Acil</li>
-        <li><b>Personnummer:</b> 19971117-****</li>
+        <li><b>Personnummer:</b>19971117-****</li>
         <li><b>Adress:</b> Förlikningsvägen 8</li>
         <li><b>Postort/ Nummer:</b> 145 60 Nosborg</li>
         <li><b>Mobil:</b> 0760332629</li>
         <li><b>E-post:</b> beratcan_acil@hotmail.se</li>
+
         <h3>Utbildning:</h3>
-        <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
-        <p id="demo" style="display:none">Kvarnhagskolan 2007-2013</p>
-        <li>Tumba gymnasium (Finansekonomi spets)	<2013></2013>-2016</li>
-        <li>Nackademin (Programutvecklare.NET, Share-Point)   2016-2018</li>
-        
+        <div id="flip">Visa mer/ mindre</div>
+        <div id="panel"><p>Kvarnhagskolan 2007-2013</p><p>Tumba gymnasium (Finansekonomi spets)	2013-2016</p><p>Nackademin (Programutvecklare.NET, Share-Point)   2016-2018</p></div>
         <h3>Arbetsplats:</h3>
-        <li>Botkyrkakommun (vård och omsorgsförvaltningen)	2015</li>
+        <div id="flip2">Visa mer/ mindre</div>
+        <div id="pane2">Botkyrkakommun (vård och omsorgsförvaltningen)	2015</div>
         <p><b>Ex på Arbetsuppgifter:</b></p>
         <li>Ekonomi administration (fakturahantering)</li>
         <li>It- administration</li>
         <li>Kommunikations uppdrag som att intervjua medarbetare och skapa artiklar till Botkyrka kommuns intranät</li>
         <li>Diverse administrativt arbete</li>
+      
         <h3>Praktikplats:</h3>
-        <li>Konsum Johanneshov</li>
+        <div id="flip3">Visa mer/ mindre</div>
+        <div id="pane3"><p>Konsum Johanneshov</p></div>
+        
         <h3>Språkkunskap:</h3>
-        <li>Svenska första språk behandlar det lika bra som mitt modersmål.</li>
-        <li>Turkiska modersmål väldigt goda kunskaper.</li>
-        <li>Engelska engelska 6 (gymnasium nivå)</li>
+        <div id="flip4">Visa mer/ mindre</div>
+        <div id="pane4"><p><b>Svenska</b> första språk behandlar det lika bra som mitt modersmål</p><p><b>Turkiska</b> modersmål väldigt goda kunskaper</p><p><b>Engelska</b> engelska 6 (gymnasium nivå)</p></div>
+      
         <h3>Övrigt:</h3>
-        <p>Har B-körkort. Väldigt goda data kunskaper inom</p>
-        <li>office paketet</li>
-        <li>aditro(för faktura hantering)</li>
-        <li>C#</li>
-        <li>ADO.NET</li>
-        <li>Entity Framework</li>
-        <li>Database</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Visual studio/ Code</li>
+        <div id="flip5">Visa mer/ mindre</div>
+        <div id="pane5"><p>Har B-körkort</p><p><b>Har även mycket goda kunskaper inom..</b></p><p>Office paketet</p><p>aditro(för faktura hantering)</p><p>C#</p><p>ADO.NET</p><p>Entitty Framework</p><p>Visual studio/ Code</p><p>Database</p><p>HTML</p><p>CSS</p><p>Javascript</p><p>JQuery</p></div>
+      
         <a href="personligbrev.html" style="float: right;"><img border="0" alt="PersonligBrev" src="arrow.png" width="100" height="100"></a>
 </body>
 </html>
