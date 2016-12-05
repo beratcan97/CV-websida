@@ -7,6 +7,13 @@
     <ul style="list-style-type:disc"></ul>
     <div id="snow">
     </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:10px;width:10px;padding:10}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -97,10 +104,50 @@ $(document).ready(function(){
 </style>
 </head>
 <body>
-        <h1>Beratcan Acil CV</h1>
-        <center>
-        <img src="Beratcan.jpg" alt="Beratcan" style="text-align: center;width:100px;height:150px;">
-        </center>
+    <h1>Beratcan Acil CV</h1>
+<    <div class="w3-content w3-display-container" style="max-width:230px">
+  <img class="mySlides" src="Beratcan1.jpg" style="text-align: center;width:230px;height:260px;">
+  <img class="mySlides" src="Beratcan2.png" style="text-align: center;width:230px;height:260px;">
+  <img class="mySlides" src="beratcan3.jpg" style="text-align: center;width:230px;height:260px;">
+  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+        <div class="w3-container">
         <li><b>Namn:</b> Beratcan Acil</li>
         <li><b>Personnummer:</b>19971117-****</li>
         <li><b>Adress:</b> Förlikningsvägen 8</li>
@@ -108,28 +155,19 @@ $(document).ready(function(){
         <li><b>Mobil:</b> 0760332629</li>
         <li><b>E-post:</b> beratcan_acil@hotmail.se</li>
 
-        <h3>Utbildning:</h3>
-        <div id="flip">Visa mer/ mindre</div>
-        <div id="panel"><p>Kvarnhagskolan 2007-2013</p><p>Tumba gymnasium (Finansekonomi spets)	2013-2016</p><p>Nackademin (Programutvecklare.NET, Share-Point)   2016-2018</p></div>
-        <h3>Arbetsplats:</h3>
-        <div id="flip2">Visa mer/ mindre</div>
-        <div id="pane2">Botkyrkakommun (vård och omsorgsförvaltningen)	2015</div>
-        <p><b>Ex på Arbetsuppgifter:</b></p>
-        <li>Ekonomi administration (fakturahantering)</li>
-        <li>It- administration</li>
-        <li>Kommunikations uppdrag som att intervjua medarbetare och skapa artiklar till Botkyrka kommuns intranät</li>
-        <li>Diverse administrativt arbete</li>
-      
-        <h3>Praktikplats:</h3>
-        <div id="flip3">Visa mer/ mindre</div>
+        <div id="flip"><b>Utbildning</b></div>
+        <div id="panel"><p>Kvarnhagskolan 2007-2013</p><p>Tumba gymnasium (Finansekonomi spets)	2013-2016</p><p>Nackademin (Programutvecklare.NET, Share-Point) 2016-2018</p></div>
+
+        <div id="flip2"><b>Arbetsplats</b></div>
+        <div id="pane2"><p>Botkyrkakommun (vård och omsorgsförvaltningen) 2015</p><p><b>EX på Arbetsuppgifter</b></p><p>Ekonomi administration (fakturahantering), It- administration, Kommunikations uppdrag som att intervjua medarbetare och skapa artiklar till Botkyrka kommuns intranät, Diverse administrativt arbete</p></div>
+
+        <div id="flip3"><b>Praktikplats</b></div>
         <div id="pane3"><p>Konsum Johanneshov</p></div>
         
-        <h3>Språkkunskap:</h3>
-        <div id="flip4">Visa mer/ mindre</div>
+        <div id="flip4"><b>Språkkunskap</b></div>
         <div id="pane4"><p><b>Svenska</b> första språk behandlar det lika bra som mitt modersmål</p><p><b>Turkiska</b> modersmål väldigt goda kunskaper</p><p><b>Engelska</b> engelska 6 (gymnasium nivå)</p></div>
       
-        <h3>Övrigt:</h3>
-        <div id="flip5">Visa mer/ mindre</div>
+        <div id="flip5"><b>Övrigt</b></div>
         <div id="pane5"><p>Har B-körkort</p><p><b>Har även mycket goda kunskaper inom..</b></p><p>Office paketet</p><p>aditro(för faktura hantering)</p><p>C#</p><p>ADO.NET</p><p>Entitty Framework</p><p>Visual studio/ Code</p><p>Database</p><p>HTML</p><p>CSS</p><p>Javascript</p><p>JQuery</p></div>
       
         <a href="personligbrev.html" style="float: right;"><img border="0" alt="PersonligBrev" src="arrow.png" width="100" height="100"></a>
